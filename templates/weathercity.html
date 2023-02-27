@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ city }}</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+	<div class="container py-5">
+		<h2>информация по городу:</h2>
+		<div>
+			<ul class="list-group list-group-flush">
+			    <li class="list-group-item display-4">{{ city }}</li>
+			    <li class="list-group-item">температура: {{ temp }}<sup>o</sup>C</li>
+			    <li class="list-group-item">давление: {{ pressure }} мм.рт.ст.</li>
+			    <li class="list-group-item">влажность: {{ humidity }}%</li>
+			</ul>
+			<img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="">
+			<br>
+		    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Вернуться назад</a>
+		</div>
+	</div>
+</body>
+</html>

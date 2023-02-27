@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather application</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+	<header>
+		<div class="collapse" id="navbarHeader" style="">  
+	  	</div>
+	  	<div class="navbar navbar-dark bg-Primary shadow-sm">
+	    <div class="container">
+	        <strong>The WeatherApp</strong> 
+	    </div>
+	  	</div>
+	</header>
+	<div class="container py-5">
+		<h2 class="table-danger">{{ key1 }}</h2>
+	<p class="display-4 pb-2">Введите {{ key2 }} название города</p>
+	<form action="{% url 'weather' %}">
+		<textarea name="message" id="" cols="30" rows="1" class="form-control" placeholder="Введите название города"></textarea>
+		<br>
+		<input type="submit" class="btn btn-primary btn-lg">
+	</form>
+	</div>
+
+
+</body>
+</html>
