@@ -1,12 +1,12 @@
 {
     "builds": [{
-        "src": "*py",
-        "use": "@burundukov/app"
+        "src": "weatherapp/wsgi.py",
+        "use": "@burundukov/vercel-python-wsgi"
     }],
     "routes": [
         {
-            "src": "(.*)",
-            "dest": "manage.py"
+            "src": "/(.*)",
+            "dest": "weatherapp/wsgi.py"
         }
     ]
 }
